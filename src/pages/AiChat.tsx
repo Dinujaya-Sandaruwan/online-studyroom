@@ -254,7 +254,7 @@ const ChatPage: React.FC = () => {
             </div>
             <div className="resources-list">
               {resources.length === 0 ? (
-                <p className="resources-empty">No resources generated yet</p>
+                <p className="resources-empty">Loading resources...</p>
               ) : (
                 resources.map((resource) => (
                   <div
