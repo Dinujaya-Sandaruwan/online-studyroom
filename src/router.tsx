@@ -6,6 +6,7 @@ import ChatLoading from "./pages/ChatLoading";
 import QuizPage from "./pages/Quiz";
 import DepartmentSelection from "./pages/SelectDep";
 import QuizCreator from "./pages/SelectDepForAdd";
+import Leaderboard from "./pages/LeaderBoard";
 
 const Router = () => {
   return (
@@ -18,6 +19,7 @@ const Router = () => {
       <Route path="/select-dep-to-play" element={<DepartmentSelection />} />
       <Route path="/select-dep-to-add" element={<QuizCreator />} />
       <Route path="/quiz" element={<QuizPage />} />
+      <Route path="/leader-board" element={<Leaderboard />} />
     </Routes>
   );
 };
