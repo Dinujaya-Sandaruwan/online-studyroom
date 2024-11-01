@@ -1,0 +1,177 @@
+// Department Selection Page Styles
+.department-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.departments {
+  flex-grow: 1;
+  background: linear-gradient(to bottom, #eff6ff, white);
+  padding: 4rem 0;
+
+  &__container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    &-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: var(--color-gray-900);
+      margin-bottom: 1rem;
+    }
+
+    &-subtitle {
+      font-size: 1.25rem;
+      color: var(--color-gray-600);
+      max-width: 36rem;
+      margin: 0 auto;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.department-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  &__header {
+    padding: 2rem 2rem 0rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__icon-wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--ict {
+      background: linear-gradient(
+        135deg,
+        var(--color-primary),
+        var(--color-purple)
+      );
+    }
+
+    &--iat {
+      background: linear-gradient(
+        135deg,
+        var(--color-primary),
+        var(--color-purple)
+      );
+    }
+
+    &--env {
+      background: linear-gradient(
+        135deg,
+        var(--color-green),
+        var(--color-primary)
+      );
+    }
+
+    &--agri {
+      background: linear-gradient(
+        135deg,
+        var(--color-primary-dark),
+        var(--color-green-dark)
+      );
+    }
+  }
+
+  &__icon {
+    color: white;
+  }
+
+  &__title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--color-gray-900);
+    text-align: center;
+  }
+
+  &__content {
+    padding: 0 2rem 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__description {
+    color: var(--color-gray-600);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    flex-grow: 1;
+  }
+
+  &__button {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+
+    &--ict {
+      background-color: var(--color-purple);
+      &:hover {
+        background-color: var(--color-purple-dark);
+      }
+    }
+
+    &--iat {
+      background-color: var(--color-purple);
+      &:hover {
+        background-color: var(--color-purple-dark);
+      }
+    }
+
+    &--env {
+      background-color: var(--color-green);
+      &:hover {
+        background-color: var(--color-green-dark);
+      }
+    }
+
+    &--agri {
+      background-color: var(--color-green);
+      &:hover {
+        background-color: var(--color-green-dark);
+      }
+    }
+  }
+}
