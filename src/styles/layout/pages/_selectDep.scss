@@ -21,10 +21,17 @@
     margin-bottom: 3rem;
 
     &-title {
-      font-size: 2.5rem;
-      font-weight: bold;
+      font-size: 2.75rem;
+      font-weight: 800;
       color: var(--color-gray-900);
       margin-bottom: 1rem;
+      background: linear-gradient(
+        to right,
+        var(--color-primary),
+        var(--color-purple)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     &-subtitle {
@@ -85,8 +92,8 @@
     &--iat {
       background: linear-gradient(
         135deg,
-        var(--color-primary),
-        var(--color-purple)
+        var(--color-purple),
+        var(--color-green)
       );
     }
 
@@ -147,9 +154,9 @@
     font-weight: 500;
 
     &--ict {
-      background-color: var(--color-purple);
+      background-color: var(--color-primary);
       &:hover {
-        background-color: var(--color-purple-dark);
+        background-color: var(--color-primary-dark);
       }
     }
 
@@ -168,9 +175,9 @@
     }
 
     &--agri {
-      background-color: var(--color-green);
+      background-color: var(--color-primary-dark);
       &:hover {
-        background-color: var(--color-green-dark);
+        background-color: var(--color-purple-dark);
       }
     }
   }

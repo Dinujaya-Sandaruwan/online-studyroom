@@ -5,6 +5,7 @@ import ChatPage from "./pages/AiChat";
 import ChatLoading from "./pages/ChatLoading";
 import QuizPage from "./pages/Quiz";
 import DepartmentSelection from "./pages/SelectDep";
+import QuizCreator from "./pages/SelectDepForAdd";
 
 const Router = () => {
   return (
@@ -14,7 +15,8 @@ const Router = () => {
       <Route path="/loading" element={<ChatLoading />} />
       <Route path="/knoledge-base" element={<ChatPage />} />
       <Route path="/quiz" element={<QuizPage />} />
-      <Route path="/select-dep" element={<DepartmentSelection />} />
+      <Route path="/select-dep-to-play" element={<DepartmentSelection />} />
+      <Route path="/select-dep-to-add" element={<QuizCreator />} />
     </Routes>
   );
 };

@@ -40,29 +40,29 @@ const DepartmentCard: React.FC<DepartmentCardProps> = ({
 const DepartmentSelection: React.FC = () => {
   const departments = [
     {
-      title: "Information and Communication Technology",
+      title: "ICT Department",
       description:
         "Explore the world of ICT through interactive quizzes covering programming, networking, and digital innovation.",
       icon: <Cpu className="department-card__icon" size={40} />,
       variant: "ict" as const,
     },
     {
-      title: "Environmental Technology",
-      description:
-        "Learn about sustainable practices, environmental management, and green technologies through engaging quizzes.",
-      icon: <Router className="department-card__icon" size={40} />,
-      variant: "env" as const,
-    },
-    {
-      title: "Instrumentation and Automation Technology",
+      title: "IAT Department",
       description:
         "Test your knowledge in industrial automation, control systems, and smart manufacturing processes.",
       icon: <Gauge className="department-card__icon" size={40} />,
       variant: "iat" as const,
     },
+    {
+      title: "Environmental Tech",
+      description:
+        "Learn about sustainable practices, environmental management, and green technologies through engaging quizzes.",
+      icon: <Router className="department-card__icon" size={40} />,
+      variant: "env" as const,
+    },
 
     {
-      title: "Agricultural Technology",
+      title: "Agricultural Tech",
       description:
         "Discover modern farming techniques, precision agriculture, and sustainable food production systems.",
       icon: <Leaf className="department-card__icon" size={40} />,
