@@ -6,6 +6,7 @@ import {
   Paperclip,
   Loader2,
   File,
+  User,
 } from "lucide-react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
@@ -208,7 +209,9 @@ const ChatPage: React.FC = () => {
                       <Sparkles className="message-icon ai-icon" size={24} />
                     )
                   ) : (
-                    <div className="message-icon user-icon">You</div>
+                    <div className="message-icon user-icon">
+                      <User />
+                    </div>
                   )}
                   <div className="message-content">
                     {message.content ||

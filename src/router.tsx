@@ -7,6 +7,7 @@ import QuizPage from "./pages/Quiz";
 import DepartmentSelection from "./pages/SelectDep";
 import QuizCreator from "./pages/SelectDepForAdd";
 import Leaderboard from "./pages/LeaderBoard";
+import AddQuiz from "./pages/AddQuiz";
 
 const Router = () => {
   return (
@@ -20,6 +21,7 @@ const Router = () => {
       <Route path="/select-dep-to-add" element={<QuizCreator />} />
       <Route path="/quiz" element={<QuizPage />} />
       <Route path="/leader-board" element={<Leaderboard />} />
+      <Route path="/add-quiz" element={<AddQuiz />} />
     </Routes>
   );
 };
