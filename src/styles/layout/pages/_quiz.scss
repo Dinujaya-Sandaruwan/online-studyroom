@@ -1,0 +1,254 @@
+@mixin quizContainer {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.quiz-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #eff6ff, white);
+}
+
+.quiz-main {
+  flex-grow: 1;
+  padding: 2rem 0;
+}
+
+.quiz-container {
+  @include quizContainer;
+  max-width: 48rem;
+}
+
+.quiz-score {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+
+  span {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-gray-900);
+  }
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20rem;
+
+  .loading-animation {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.quiz-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-question {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-gray-900);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.quiz-answers {
+  display: grid;
+  gap: 1rem;
+}
+
+.quiz-answer {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--color-gray-400);
+  border-radius: 0.5rem;
+  background-color: white;
+  color: var(--color-gray-900);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover:not(:disabled) {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary);
+    color: white;
+  }
+
+  &.correct {
+    background-color: var(--color-green);
+    border-color: var(--color-green);
+    color: white;
+  }
+
+  &.incorrect {
+    background-color: #ef4444;
+    border-color: #dc2626;
+    color: white;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+}
+
+.quiz-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.quiz-action-button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+
+  &.knowledge-base {
+    background-color: var(--color-purple);
+    color: white;
+
+    &:hover {
+      background-color: var(--color-purple-dark);
+    }
+  }
+
+  &.retry {
+    background-color: var(--color-primary);
+    color: white;
+
+    &:hover {
+      background-color: var(--color-primary-dark);
+    }
+  }
+
+  &.next {
+    background-color: var(--color-primary);
+    color: white;
+
+    &:hover {
+      background-color: var(--color-primary-dark);
+    }
+  }
+
+  &.voice {
+    background-color: var(--color-purple);
+    color: white;
+
+    &:hover {
+      background-color: var(--color-purple-dark);
+    }
+  }
+}
+
+// Modal styles
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 32rem;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-gray-600);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: var(--color-gray-900);
+    background-color: var(--color-gray-400);
+  }
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-gray-900);
+  margin-bottom: 1.5rem;
+}
+
+.modal-textarea {
+  width: 92.7%;
+  padding: 1rem;
+  border: 2px solid var(--color-gray-400);
+  border-radius: 0.5rem;
+  resize: vertical;
+  min-height: 8rem;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-primary);
+  }
+}
+
+.modal-submit {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--color-primary-dark);
+  }
+}
+
+// Toast customization
+// .Toastify__toast {
+//   border-radius: 0.5rem;
+// }
+
+// .Toastify__toast--success {
+//   background-color: var(--color-green);
+// }

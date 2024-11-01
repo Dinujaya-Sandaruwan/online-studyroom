@@ -17,6 +17,7 @@ const Router = () => {
       <Route path="/quiz" element={<QuizPage />} />
       <Route path="/select-dep-to-play" element={<DepartmentSelection />} />
       <Route path="/select-dep-to-add" element={<QuizCreator />} />
+      <Route path="/quiz" element={<QuizPage />} />
     </Routes>
   );
 };
