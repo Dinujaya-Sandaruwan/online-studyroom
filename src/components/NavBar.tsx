@@ -6,6 +6,11 @@ const NavBar = () => {
     .split("; ")
     .some((cookie) => cookie.startsWith("login=true"));
 
+  const clearLoginCookie = () => {
+    document.cookie = "login=; path=/; max-age=0";
+    window.location.reload();
+  };
+
   return (
     <nav className="nav">
       <div className="nav__container">
@@ -28,7 +33,7 @@ const NavBar = () => {
                 Leaderboard
               </Link>
             </div>
-            <div className="profile-group">
+            <div className="profile-group" onClick={clearLoginCookie}>
               <p className="user-name">UserName</p>
               <div className="profile-icon">
                 <User />
