@@ -39,7 +39,7 @@ const LoginPage: React.FC = () => {
           <div className="login-branding">
             <div className="login-branding__content">
               <GitBranch className="login-branding__icon" size={64} />
-              <h1 className="login-branding__title">QuizMaster</h1>
+              <h1 className="login-branding__title">Online Studyroom</h1>
               <p className="login-branding__subtitle">
                 Connect, Learn, and Grow with Interactive Quizzes
               </p>
