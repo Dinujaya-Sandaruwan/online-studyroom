@@ -3,6 +3,7 @@ import { Cpu, Router, Gauge, Leaf, ChevronRight } from "lucide-react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import useAuthRedirect from "../hooks/useAuthRedirect";
+import { Link } from "react-router-dom";
 
 interface DepartmentCardProps {
   title: string;
@@ -30,12 +31,14 @@ const DepartmentCard: React.FC<DepartmentCardProps> = ({
       </div>
       <div className="department-card__content">
         <p className="department-card__description">{description}</p>
-        <button
-          className={`department-card__button department-card__button--${variant}`}
-        >
-          <span>Start Quiz</span>
-          <ChevronRight size={20} />
-        </button>
+        <Link to="/quiz" className="navigation-link">
+          <button
+            className={`department-card__button department-card__button--${variant}`}
+          >
+            <span>Start Quiz</span>
+            <ChevronRight size={20} />
+          </button>
+        </Link>
       </div>
     </div>
   );

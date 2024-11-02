@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Book, RefreshCcw, ChevronRight, Mic, X } from "lucide-react";
+import { Book, ChevronRight, Mic, X, Trophy } from "lucide-react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Confetti from "react-confetti";
@@ -178,23 +178,22 @@ const Quiz: React.FC = () => {
                   <Link
                     to="/loading"
                     className="quiz-action-button knowledge-base"
+                    rel="noreferrer"
+                    target={"_blank"}
                   >
                     <Book size={20} />
                     <span>Knowledge Base</span>
                   </Link>
-                  <button
+
+                  <Link
+                    to="/leader-board"
                     className="quiz-action-button retry"
-                    onClick={() => {
-                      setCurrentQuestion(0);
-                      setScore(0);
-                      setGameOver(false);
-                      setSelectedAnswer(null);
-                      setShowNextButtons(false);
-                    }}
+                    rel="noreferrer"
+                    target={"_blank"}
                   >
-                    <RefreshCcw size={20} />
-                    <span>Retry Quiz</span>
-                  </button>
+                    <Trophy size={20} />
+                    <span>View Leaderboard</span>
+                  </Link>
                 </div>
               )}
             </div>

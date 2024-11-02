@@ -3,6 +3,7 @@ import { Cpu, Gauge, Leaf, Router, Plus, Library } from "lucide-react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import useAuthRedirect from "../hooks/useAuthRedirect";
+import { Link } from "react-router-dom";
 
 interface CreatorCardProps {
   title: string;
@@ -49,10 +50,12 @@ const CreatorCard: React.FC<CreatorCardProps> = ({
         <p className="creator-card__description">{description}</p>
 
         <div className="creator-card__actions">
-          <button className="creator-card__button creator-card__button--primary">
-            <Plus size={18} />
-            <span>Create Quiz</span>
-          </button>
+          <Link to="/add-quiz">
+            <button className="creator-card__button creator-card__button--primary">
+              <Plus size={18} />
+              <span>Create Quiz</span>
+            </button>
+          </Link>
           <button className="creator-card__button creator-card__button--secondary">
             <Library size={18} />
             <span>View All</span>

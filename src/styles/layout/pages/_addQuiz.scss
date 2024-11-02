@@ -285,6 +285,10 @@
     text-decoration: none;
     font-weight: 600;
     transition: background-color 0.3s ease;
+    // background-color: green;
+    cursor: pointer;
+    position: relative; /* Ensure it respects the stacking context */
+    z-index: 10; /* Give it a high z-index */
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.9);

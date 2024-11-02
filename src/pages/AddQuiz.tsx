@@ -183,7 +183,7 @@ const AddQuiz: React.FC = () => {
               <FileText className="upload-icon" />
               <span>Supported Formats: PDF, Images, Docs</span>
             </div>
-            <Link to="/knowledge-base" className="knowledge-base__link">
+            <Link to="/add-to-knowledge-base" className="knowledge-base__link">
               <Upload /> Go to Knowledge Base
             </Link>
           </div>
@@ -193,7 +193,7 @@ const AddQuiz: React.FC = () => {
               Recognize and celebrate the champions who enrich our learning
               community! 🌟
             </p>
-            <Link to="/leaderboard" className="leaderboard-card__link">
+            <Link to="/leader-board" className="leaderboard-card__link">
               <Star /> View Leaderboard
             </Link>
           </div>
