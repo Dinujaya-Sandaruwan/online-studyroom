@@ -10,15 +10,24 @@ import {
 } from "lucide-react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage: React.FC = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  // src/utils/cookieUtils.js
+  const setLoginCookie = () => {
+    document.cookie = "login=true; path=/; max-age=3600"; // Cookie valid for 1 hour
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Add login logic here
-    console.log("Login attempted", { email, password });
+    // console.log("Login attempted", { email, password });
+    setLoginCookie();
+    navigate("/");
   };
 
   return (
