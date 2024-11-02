@@ -9,6 +9,7 @@ import QuizCreator from "./pages/SelectDepForAdd";
 import Leaderboard from "./pages/LeaderBoard";
 import AddQuiz from "./pages/AddQuiz";
 import DocumentUpload from "./pages/AddToKnowledgeBase";
+import AdminDashboard from "./pages/Dashboard";
 
 const Router = () => {
   return (
@@ -24,6 +25,7 @@ const Router = () => {
       <Route path="/leader-board" element={<Leaderboard />} />
       <Route path="/add-quiz" element={<AddQuiz />} />
       <Route path="/add-to-knowledge-base" element={<DocumentUpload />} />
+      <Route path="/dashboard" element={<AdminDashboard />} />
     </Routes>
   );
 };
