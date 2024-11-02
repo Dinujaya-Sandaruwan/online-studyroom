@@ -111,4 +111,9 @@ body {
   @extend .poppins-regular;
   margin: 0;
   padding: 0;
+
+  .navigation-link {
+    text-decoration: none;
+    color: inherit;
+  }
 }

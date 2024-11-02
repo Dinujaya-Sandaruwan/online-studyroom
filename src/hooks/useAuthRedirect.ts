@@ -13,7 +13,7 @@ const useAuthRedirect = () => {
 
     // If the cookie is not present, redirect to the homepage
     if (!isLoggedIn) {
-      navigate("/");
+      navigate("/sign-in");
     }
   }, [navigate]);
 };

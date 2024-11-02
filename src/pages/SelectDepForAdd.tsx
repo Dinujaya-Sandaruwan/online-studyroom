@@ -2,6 +2,7 @@ import React from "react";
 import { Cpu, Gauge, Leaf, Router, Plus, Library } from "lucide-react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import useAuthRedirect from "../hooks/useAuthRedirect";
 
 interface CreatorCardProps {
   title: string;
@@ -20,44 +21,47 @@ const CreatorCard: React.FC<CreatorCardProps> = ({
   icon,
   variant,
   stats,
-}) => (
-  <div className={`creator-card creator-card--${variant}`}>
-    <div className="creator-card__content">
-      <div className="creator-card__header">
-        <div
-          className={`creator-card__icon-wrapper creator-card__icon-wrapper--${variant}`}
-        >
-          {icon}
+}) => {
+  useAuthRedirect();
+  return (
+    <div className={`creator-card creator-card--${variant}`}>
+      <div className="creator-card__content">
+        <div className="creator-card__header">
+          <div
+            className={`creator-card__icon-wrapper creator-card__icon-wrapper--${variant}`}
+          >
+            {icon}
+          </div>
+          <h3 className="creator-card__title">{title}</h3>
         </div>
-        <h3 className="creator-card__title">{title}</h3>
-      </div>
 
-      <div className="creator-card__stats">
-        <div className="creator-card__stat">
-          <div className="creator-card__stat-number">{stats.quizzes}</div>
-          <div className="creator-card__stat-label">Quizzes</div>
+        <div className="creator-card__stats">
+          <div className="creator-card__stat">
+            <div className="creator-card__stat-number">{stats.quizzes}</div>
+            <div className="creator-card__stat-label">Quizzes</div>
+          </div>
+          <div className="creator-card__stat">
+            <div className="creator-card__stat-number">{stats.questions}</div>
+            <div className="creator-card__stat-label">Questions</div>
+          </div>
         </div>
-        <div className="creator-card__stat">
-          <div className="creator-card__stat-number">{stats.questions}</div>
-          <div className="creator-card__stat-label">Questions</div>
+
+        <p className="creator-card__description">{description}</p>
+
+        <div className="creator-card__actions">
+          <button className="creator-card__button creator-card__button--primary">
+            <Plus size={18} />
+            <span>Create Quiz</span>
+          </button>
+          <button className="creator-card__button creator-card__button--secondary">
+            <Library size={18} />
+            <span>View All</span>
+          </button>
         </div>
-      </div>
-
-      <p className="creator-card__description">{description}</p>
-
-      <div className="creator-card__actions">
-        <button className="creator-card__button creator-card__button--primary">
-          <Plus size={18} />
-          <span>Create Quiz</span>
-        </button>
-        <button className="creator-card__button creator-card__button--secondary">
-          <Library size={18} />
-          <span>View All</span>
-        </button>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 const QuizCreator: React.FC = () => {
   const departments = [

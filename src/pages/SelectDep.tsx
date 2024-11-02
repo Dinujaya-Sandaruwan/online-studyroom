@@ -2,6 +2,7 @@ import React from "react";
 import { Cpu, Router, Gauge, Leaf, ChevronRight } from "lucide-react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import useAuthRedirect from "../hooks/useAuthRedirect";
 
 interface DepartmentCardProps {
   title: string;
@@ -15,27 +16,30 @@ const DepartmentCard: React.FC<DepartmentCardProps> = ({
   description,
   icon,
   variant,
-}) => (
-  <div className="department-card">
-    <div className="department-card__header">
-      <div
-        className={`department-card__icon-wrapper department-card__icon-wrapper--${variant}`}
-      >
-        {icon}
+}) => {
+  useAuthRedirect();
+  return (
+    <div className="department-card">
+      <div className="department-card__header">
+        <div
+          className={`department-card__icon-wrapper department-card__icon-wrapper--${variant}`}
+        >
+          {icon}
+        </div>
+        <h3 className="department-card__title">{title}</h3>
       </div>
-      <h3 className="department-card__title">{title}</h3>
+      <div className="department-card__content">
+        <p className="department-card__description">{description}</p>
+        <button
+          className={`department-card__button department-card__button--${variant}`}
+        >
+          <span>Start Quiz</span>
+          <ChevronRight size={20} />
+        </button>
+      </div>
     </div>
-    <div className="department-card__content">
-      <p className="department-card__description">{description}</p>
-      <button
-        className={`department-card__button department-card__button--${variant}`}
-      >
-        <span>Start Quiz</span>
-        <ChevronRight size={20} />
-      </button>
-    </div>
-  </div>
-);
+  );
+};
 
 const DepartmentSelection: React.FC = () => {
   const departments = [

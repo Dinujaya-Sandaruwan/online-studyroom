@@ -3,6 +3,7 @@ import React from "react";
 import { PenTool, ChevronRight, Brain } from "lucide-react";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 const Home: React.FC = () => {
   return (
@@ -36,10 +37,12 @@ const Home: React.FC = () => {
                   Create engaging quizzes and share your expertise with learners
                   worldwide. Help shape the future of interactive education.
                 </p>
-                <button className="card__button card__button--purple">
-                  <span>Start Creating</span>
-                  <ChevronRight size={20} />
-                </button>
+                <Link to="/select-dep-to-add" className="navigation-link">
+                  <button className="card__button card__button--purple">
+                    <span>Start Creating</span>
+                    <ChevronRight size={20} />
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -54,10 +57,13 @@ const Home: React.FC = () => {
                   Challenge yourself with diverse quizzes, learn new topics, and
                   track your progress in an engaging way.
                 </p>
-                <button className="card__button card__button--green">
-                  <span>Start Learning</span>
-                  <ChevronRight size={20} />
-                </button>
+                <Link to="/select-dep-to-play" className="navigation-link">
+                  <button className="card__button card__button--green">
+                    <span>Start Learning</span>
+
+                    <ChevronRight size={20} />
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
