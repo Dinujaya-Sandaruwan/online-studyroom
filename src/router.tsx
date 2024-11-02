@@ -8,6 +8,7 @@ import DepartmentSelection from "./pages/SelectDep";
 import QuizCreator from "./pages/SelectDepForAdd";
 import Leaderboard from "./pages/LeaderBoard";
 import AddQuiz from "./pages/AddQuiz";
+import DocumentUpload from "./pages/AddToKnowledgeBase";
 
 const Router = () => {
   return (
@@ -22,6 +23,7 @@ const Router = () => {
       <Route path="/quiz" element={<QuizPage />} />
       <Route path="/leader-board" element={<Leaderboard />} />
       <Route path="/add-quiz" element={<AddQuiz />} />
+      <Route path="/add-to-knowledge-base" element={<DocumentUpload />} />
     </Routes>
   );
 };
