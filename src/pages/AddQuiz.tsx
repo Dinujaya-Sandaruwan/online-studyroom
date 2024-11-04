@@ -36,7 +36,7 @@ const AddQuiz: React.FC = () => {
     await new Promise((resolve) => setTimeout(resolve, 2000));
 
     const generatedAnswers = [
-      "Information and Communication Technology",
+      "Information and Connection Technology",
       "Integrated Computer Training",
       "Internet and Computer Techniques",
     ];
