@@ -17,7 +17,7 @@ const Router = () => {
       <Route path="/" element={<Home />} />
       <Route path="/sign-in" element={<LoginPage />} />
       <Route path="/loading" element={<ChatLoading />} />
-      <Route path="/knoledge-base" element={<ChatPage />} />
+      <Route path="/knowledge-base" element={<ChatPage />} />
       <Route path="/quiz" element={<QuizPage />} />
       <Route path="/select-dep-to-play" element={<DepartmentSelection />} />
       <Route path="/select-dep-to-add" element={<QuizCreator />} />

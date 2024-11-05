@@ -1,9 +1,11 @@
 import Lottie from "react-lottie-player";
 import animationData from "../assets/animations/dataLoading.json";
+import { useNavigate } from "react-router-dom";
 
 const ChatLoading = () => {
+  const navigate = useNavigate();
   setTimeout(() => {
-    window.location.href = "/knoledge-base";
+    navigate("/knowledge-base");
   }, 5000);
   return (
     <div className="loadingContainer">
