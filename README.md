@@ -1,27 +1,30 @@
 # Online Study Room
 
-A crowdsourcing platform integrated with artificial intelligence, designed to help university students find answers to complex academic questions by connecting them with knowledgeable peers[1].
+A crowdsourcing platform integrated with artificial intelligence, designed to help university students find answers to complex academic questions by connecting them with knowledgeable peers.
+
+<img width="1822" alt="image" src="https://github.com/user-attachments/assets/d11c7618-b623-4473-b808-6a2160225d9b">
+
 
 ## Features
 
 - **User Roles**
   - Knowledge Seekers: Students seeking academic help
   - Knowledge Linkers: Volunteer contributors providing academic content
-  - Administrators: Platform moderators with full control[1]
+  - Administrators: Platform moderators with full control
 
 - **AI-Powered Learning**
   - Integrated AI language model for academic assistance
   - Knowledge base built from user contributions
-  - Voice feature for knowledge sharing[1]
+  - Voice feature for knowledge sharingx
 
 - **Data Validation**
   - Null safety implementation
-  - ZOD library integration for input validation[1]
+  - ZOD library integration for input validation
 
 - **Engagement Features**
   - Real-time leaderboard system
   - User contribution tracking
-  - Trustpilot integration for feedback[1]
+  - Trustpilot integration for feedback
 
 ## Tech Stack
 
