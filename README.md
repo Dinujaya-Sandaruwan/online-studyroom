@@ -1,50 +1,93 @@
-# React + TypeScript + Vite
+# Online Study Room
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A crowdsourcing platform integrated with artificial intelligence, designed to help university students find answers to complex academic questions by connecting them with knowledgeable peers[1].
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **User Roles**
+  - Knowledge Seekers: Students seeking academic help
+  - Knowledge Linkers: Volunteer contributors providing academic content
+  - Administrators: Platform moderators with full control[1]
 
-## Expanding the ESLint configuration
+- **AI-Powered Learning**
+  - Integrated AI language model for academic assistance
+  - Knowledge base built from user contributions
+  - Voice feature for knowledge sharing[1]
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Data Validation**
+  - Null safety implementation
+  - ZOD library integration for input validation[1]
 
-- Configure the top-level `parserOptions` property like this:
+- **Engagement Features**
+  - Real-time leaderboard system
+  - User contribution tracking
+  - Trustpilot integration for feedback[1]
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Tech Stack
+
+- React 18
+- TypeScript
+- Vite
+- SASS
+- React Router DOM
+- Recharts for analytics
+- React Dropzone for file uploads
+
+## Prerequisites
+
+- Node.js (Latest LTS version recommended)
+- npm or yarn
+
+## Installation
+
+```bash
+# Clone the repository
+git clone [repository-url]
+
+# Navigate to project directory
+cd online-studyroom
+
+# Install dependencies
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Available Scripts
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+```bash
+# Development server
+npm run dev
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+# Production build
+npm run build
+
+# Lint code
+npm run lint
+
+# Preview production build
+npm run preview
 ```
+
+## Project Structure
+
+```
+online-studyroom/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   └── styles/
+├── public/
+└── package.json
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## License
+
+This project is licensed under the MIT License.
