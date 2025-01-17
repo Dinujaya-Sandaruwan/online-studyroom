@@ -10,6 +10,8 @@ import Leaderboard from "./pages/LeaderBoard";
 import AddQuiz from "./pages/AddQuiz";
 import DocumentUpload from "./pages/AddToKnowledgeBase";
 import AdminDashboard from "./pages/Dashboard";
+import LearningMethodSelector from "./pages/SelectLeaningType";
+import AddingMethodSelector from "./pages/SelectAddingType";
 
 const Router = () => {
   return (
@@ -26,6 +28,8 @@ const Router = () => {
       <Route path="/add-quiz" element={<AddQuiz />} />
       <Route path="/add-to-knowledge-base" element={<DocumentUpload />} />
       <Route path="/dashboard" element={<AdminDashboard />} />
+      <Route path="/learning-method" element={<LearningMethodSelector />} />
+      <Route path="/adding-method" element={<AddingMethodSelector />} />
     </Routes>
   );
 };
