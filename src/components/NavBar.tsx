@@ -24,10 +24,10 @@ const NavBar = () => {
           <div className="nav__links">
             <div className="link-group">
               <Link to="/select-dep-to-add" className="link">
-                Add Quiz
+                Link Knoledge
               </Link>
               <Link to="/select-dep-to-play" className="link">
-                Play Quiz
+                Seek Knoledge
               </Link>
               <Link to="/leader-board" className="link">
                 Leaderboard

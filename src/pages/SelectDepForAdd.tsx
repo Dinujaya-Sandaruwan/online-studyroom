@@ -50,10 +50,10 @@ const CreatorCard: React.FC<CreatorCardProps> = ({
         <p className="creator-card__description">{description}</p>
 
         <div className="creator-card__actions">
-          <Link to="/add-quiz">
+          <Link to="/adding-method">
             <button className="creator-card__button creator-card__button--primary">
               <Plus size={18} />
-              <span>Create Quiz</span>
+              <span>Create Now</span>
             </button>
           </Link>
           <button className="creator-card__button creator-card__button--secondary">
@@ -71,7 +71,7 @@ const QuizCreator: React.FC = () => {
     {
       title: "ICT Department",
       description:
-        "Create quizzes covering programming, networking, cybersecurity, and emerging technologies.",
+        "Create interactive learning content covering programming, networking, cybersecurity, and emerging technologies.",
       icon: <Cpu className="creator-card__icon" size={24} />,
       variant: "ict" as const,
       stats: {
@@ -82,7 +82,7 @@ const QuizCreator: React.FC = () => {
     {
       title: "IAT Department",
       description:
-        "Design quizzes about industrial automation, robotics, and control systems.",
+        "Design interactive learning content about industrial automation, robotics, and control systems.",
       icon: <Gauge className="creator-card__icon" size={24} />,
       variant: "iat" as const,
       stats: {
@@ -93,7 +93,7 @@ const QuizCreator: React.FC = () => {
     {
       title: "Environmental Tech",
       description:
-        "Develop quizzes on environmental management and sustainable practices.",
+        "Develop interactive learning content on environmental management and sustainable practices.",
       icon: <Router className="creator-card__icon" size={24} />,
       variant: "env" as const,
       stats: {
@@ -121,10 +121,10 @@ const QuizCreator: React.FC = () => {
       <main className="creator">
         <div className="creator__container">
           <div className="creator__header">
-            <h1 className="creator__header-title">Create Your Quiz</h1>
+            <h1 className="creator__header-title">Select Your Department</h1>
             <p className="creator__header-subtitle">
-              Share your knowledge by creating engaging quizzes for your
-              department. Choose your field below to get started.
+              Share your knowledge by creating engaging learning experiences for
+              your department. Choose your field below to get started.
             </p>
           </div>
 

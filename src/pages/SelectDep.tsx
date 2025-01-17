@@ -31,11 +31,11 @@ const DepartmentCard: React.FC<DepartmentCardProps> = ({
       </div>
       <div className="department-card__content">
         <p className="department-card__description">{description}</p>
-        <Link to="/quiz" className="navigation-link">
+        <Link to="/learning-method" className="navigation-link">
           <button
             className={`department-card__button department-card__button--${variant}`}
           >
-            <span>Start Quiz</span>
+            <span>Start Learning</span>
             <ChevronRight size={20} />
           </button>
         </Link>
